@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeeCode.csproj": {}
+    "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeetCode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeeCode.csproj": {
+    "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeetCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeeCode.csproj",
-        "projectName": "LeeCode",
-        "projectPath": "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeeCode.csproj",
+        "projectUniqueName": "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeetCode.csproj",
+        "projectName": "LeetCode",
+        "projectPath": "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\LeetCode.csproj",
         "packagesPath": "C:\\Users\\003565\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\003565\\Documents\\GitHub\\LeetCode\\obj\\",
         "projectStyle": "PackageReference",
