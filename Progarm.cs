@@ -49,28 +49,58 @@ namespace LeetCode
 
             #region _947_MostStonesRemovedwithSameRoworColumn
             {
-                //[[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
-                int[][] InPut =
-                {
-                    new int[]{0,0},
-                    new int[]{0,1},
-                    new int[]{1,0},
-                    new int[]{1,2},
-                    new int[]{2,1},
-                    new int[]{2,2}
-                };
-                //[[0,0],[0,2],[1,1],[2,0],[2,2]]
-                int[][] InPut2 =
-                {
-                    new int[]{0,0},
-                    new int[]{0,2},
-                    new int[]{1,1},
-                    new int[]{2,0},
-                    new int[]{2,2}
-                };
-                int Output = _947_MostStonesRemovedwithSameRoworColumn.RemoveStones(InPut);
-                Console.WriteLine(Output);
+                ////[[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+                //int[][] InPut =
+                //{
+                //    new int[]{0,0},
+                //    new int[]{0,1},
+                //    new int[]{1,0},
+                //    new int[]{1,2},
+                //    new int[]{2,1},
+                //    new int[]{2,2}
+                //};
+                ////[[0,0],[0,2],[1,1],[2,0],[2,2]]
+                //int[][] InPut2 =
+                //{
+                //    new int[]{0,0},
+                //    new int[]{0,2},
+                //    new int[]{1,1},
+                //    new int[]{2,0},
+                //    new int[]{2,2}
+                //};
+                //int Output = _947_MostStonesRemovedwithSameRoworColumn.RemoveStones(InPut);
+                //Console.WriteLine(Output);
             }
+            #endregion
+            #region
+            //[1,2,3,4,5,6]
+            TreeNode InPut = new TreeNode()
+            {
+                val = 1,
+                left = new TreeNode()
+                {
+                    val = 2,
+                    left = new TreeNode() { val = 4 },
+                    right = new TreeNode() { val = 5 }
+                },
+                right = new TreeNode()
+                {
+                    val = 3,
+                    left = new TreeNode() { val = 6 },
+                    right = new TreeNode() { val = 7 }
+                }
+            };
+
+            TreeNode InPut2 = null;
+
+            TreeNode InPut3 = new TreeNode()
+            {
+                val = 1
+            };
+
+            int Output = _222_CountCompleteTreeNodes.CountNodes(InPut);
+            Console.WriteLine(Output);
+
             #endregion
             return;
         }
