@@ -1,36 +1,53 @@
 ﻿
 
+using Microsoft.VisualBasic;
+
 namespace LeetCode.Problems
 {
     internal static class _222_CountCompleteTreeNodes
     {
+        public static string[] strings = new string[0];
         #region v1
+        //public static int CountNodes(TreeNode root)
+        //{
+        //    if(root == null)
+        //    {
+        //        return 0;
+        //    }
+        //    return CountNodes(root.left) + CountNodes(root.right) + 1;            
+        //}
+        #endregion
+        #region v2
         public static int CountNodes(TreeNode root)
-        {
-            int val = 0;
-
-            if (root != null)
-            {
-                val = root.val;
-                
-                root.left
-            }
-            return val;
-        }
-        public static void readval(TreeNode root, ref int val)
-        {
+         {
             if (root == null)
             {
-                return;
+                return 0;
             }
-            if(root.left != null)
-            {
-                val = root.val;
-                readval(root.left, ref val);
-            }
-            
+
+            recursivePreorder(root);
+
+            return strings.Length;
         }
         #endregion
+
+        public static void recursivePreorder(TreeNode root)
+        {
+            //Console.Write(root.val.ToString());
+
+            Array.Resize(ref strings, strings.Length + 1);
+
+            strings[strings.Length - 1] = root.val.ToString();
+
+            if (root.left != null)
+            {
+                recursivePreorder(root.left);
+            }
+            if (root.right != null)
+            {   
+                recursivePreorder(root.right);
+            }
+        }
     }
     internal class TreeNode
     {
@@ -44,4 +61,5 @@ namespace LeetCode.Problems
             this.right = right;
         }
     }
+
 }
