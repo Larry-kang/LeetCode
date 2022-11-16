@@ -6,7 +6,6 @@ namespace LeetCode.Problems
 {
     internal static class _222_CountCompleteTreeNodes
     {
-        public static string[] strings = new string[0];
         #region v1
         //public static int CountNodes(TreeNode root)
         //{
@@ -18,36 +17,61 @@ namespace LeetCode.Problems
         //}
         #endregion
         #region v2
+        //public static string[] strings = new string[0];
+        //public static int CountNodes(TreeNode root)
+        // {
+        //    if (root == null)
+        //    {
+        //        return 0;
+        //    }
+
+        //    recursivePreorder(root);
+
+        //    return strings.Length;
+        //}
+        //public static void recursivePreorder(TreeNode root)
+        //{
+        //    Array.Resize(ref strings, strings.Length + 1);
+
+        //    strings[strings.Length - 1] = root.val.ToString();
+
+        //    if (root.left != null)
+        //    {
+        //        recursivePreorder(root.left);
+        //    }
+        //    if (root.right != null)
+        //    {   
+        //        recursivePreorder(root.right);
+        //    }
+        //}
+        #endregion
+        #region v3
+        public static int count = 0;
         public static int CountNodes(TreeNode root)
-         {
+        {
             if (root == null)
             {
-                return 0;
+                return count;
             }
 
             recursivePreorder(root);
 
-            return strings.Length;
+            return count;
         }
-        #endregion
-
         public static void recursivePreorder(TreeNode root)
         {
-            //Console.Write(root.val.ToString());
-
-            Array.Resize(ref strings, strings.Length + 1);
-
-            strings[strings.Length - 1] = root.val.ToString();
+            count++;
 
             if (root.left != null)
             {
                 recursivePreorder(root.left);
             }
             if (root.right != null)
-            {   
+            {
                 recursivePreorder(root.right);
             }
         }
+        #endregion
     }
     internal class TreeNode
     {

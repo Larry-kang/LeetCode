@@ -72,35 +72,45 @@ namespace LeetCode
                 //Console.WriteLine(Output);
             }
             #endregion
+
             #region _222_CountCompleteTreeNodes
-            //[1,2,3,4,5,6]
-            TreeNode InPut = new TreeNode()
             {
-                val = 1,
-                left = new TreeNode()
-                {
-                    val = 2,
-                    left = new TreeNode() { val = 4 },
-                    right = new TreeNode() { val = 5 }
-                },
-                right = new TreeNode()
-                {
-                    val = 3,
-                    left = new TreeNode() { val = 6 },
-                    right = new TreeNode() { val = 7 }
-                }
-            };
+            ////[1,2,3,4,5,6]
+            //TreeNode InPut = new TreeNode()
+            //{
+            //    val = 1,
+            //    left = new TreeNode()
+            //    {
+            //        val = 2,
+            //        left = new TreeNode() { val = 4 },
+            //        right = new TreeNode() { val = 5 }
+            //    },
+            //    right = new TreeNode()
+            //    {
+            //        val = 3,
+            //        left = new TreeNode() { val = 6 }
+            //        //,right = new TreeNode() { val = 7 }
+            //    }
+            //};
 
-            TreeNode InPut2 = null;
+            //TreeNode InPut2 = null;
 
-            TreeNode InPut3 = new TreeNode()
+            //TreeNode InPut3 = new TreeNode()
+            //{
+            //    val = 1
+            //};
+
+            //int Output = _222_CountCompleteTreeNodes.CountNodes(InPut);
+            //Console.WriteLine(Output);
+            }
+            #endregion
+
+            #region _374_GuessNumberHigherorLower
             {
-                val = 1
-            };
-
-            int Output = _222_CountCompleteTreeNodes.CountNodes(InPut);
-            Console.WriteLine(Output);
-
+                int InPut = 2147483647;
+                int Output = _374_GuessNumberHigherorLower.GuessNumber(InPut);
+                Console.WriteLine(Output);
+            }
             #endregion
             return;
         }
