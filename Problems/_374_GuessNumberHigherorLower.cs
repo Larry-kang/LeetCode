@@ -36,40 +36,75 @@ namespace LeetCode.Problems
         }
         public static int GuessNumber(int n)
         {
-            int count = 1;
-            if (n < 2)
-            {
-                return 1;
-            }
-            int a = 2;
-            int guessInt = guess(a);
-            if (guessInt == 0)
-                return a;
-            int b = 1;
-            if (n % 2 == 0)
-            {
-                a = n / 2;
-            }
-            else
-            {
-                a = ((n - 1) / 2) + 1;
-            }
+            #region v1
+            //if (n < 2)
+            //{
+            //    return 1;
+            //}
+            //int a = n;
+            //int b = 1;
+            //int c;
+            //int guessInt = guess(a);
+            //if (guessInt != 0)
+            //{
+            //    guessInt = guess(b);
+            //    if(guessInt == 0)
+            //    {
+            //        a = b;
+            //    }
+            //}
 
-            while (guessInt != 0)
+            //while (guessInt != 0)
+            //{
+            //    if ((a - b) % 2 == 0)
+            //    {
+            //        c = a - ((a - b) / 2);
+            //    }
+            //    else
+            //    {
+            //        c = a - (((a - b) + 1) / 2);
+            //    }
+
+            //    guessInt = guess(c);
+            //    switch (guessInt)
+            //    {
+            //        case -1:
+            //            a = c;
+            //            break;
+            //        case 1:
+            //            b = c;
+            //            break;
+            //        case 0:
+            //            a = c;
+            //            break;
+            //    }
+            //}
+            //return a;
+            #endregion
+            #region v2
+            int low = 1;
+            int high = n;
+            int mid;
+            int res;
+            while (low <= high)
             {
-                count++;
-                guessInt = guess(a);
-                switch (guessInt)
+                mid = low + (high - low) / 2;
+
+                res = guess(mid);
+                switch (res)
                 {
-                    case -1:
-
-                        break;
+                    case 0:
+                        return mid;
                     case 1:
+                        low = mid + 1;
+                        break;
+                    case -1:
+                        high = mid - 1;
                         break;
                 }
-
             }
-            return a;
+            return -1;
+            #endregion
         }
 
     }

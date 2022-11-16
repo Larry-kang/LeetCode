@@ -107,7 +107,8 @@ namespace LeetCode
 
             #region _374_GuessNumberHigherorLower
             {
-                int InPut = 2147483647;
+                //int InPut = 2147483647;
+                int InPut = 10;
                 int Output = _374_GuessNumberHigherorLower.GuessNumber(InPut);
                 Console.WriteLine(Output);
             }
