@@ -108,8 +108,30 @@ namespace LeetCode
             #region _374_GuessNumberHigherorLower
             {
                 //int InPut = 2147483647;
-                int InPut = 10;
-                int Output = _374_GuessNumberHigherorLower.GuessNumber(InPut);
+                //int InPut = 10;
+                //int Output = _374_GuessNumberHigherorLower.GuessNumber(InPut);
+                //Console.WriteLine(Output);
+            }
+            #endregion
+
+            #region _223_RectangleArea
+            {
+                //int ax1 = -3; int ay1 = 0;
+                //int ax2 = 3; int ay2 = 4;
+                //int bx1 = 0; int by1 =-1;
+                //int bx2 = 9; int by2 = 2;
+
+                //int ax1 = 0; int ay1 = 0;
+                //int ax2 = 0; int ay2 = 0;
+                //int bx1 = -1; int by1 = -1;
+                //int bx2 = 1; int by2 = 1;
+
+                int ax1 = -2; int ay1 = -2;
+                int ax2 = 2; int ay2 = 2;
+                int bx1 = 3; int by1 = 3;
+                int bx2 = 4; int by2 = 4;
+
+                int Output = _223_RectangleArea.ComputeArea(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2);
                 Console.WriteLine(Output);
             }
             #endregion
