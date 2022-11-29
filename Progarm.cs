@@ -143,6 +143,15 @@ namespace LeetCode
             }
             #endregion
 
+            #region
+            {
+                int[] InPut = { 3, 1, 2, 4 }; 
+                _907_SumofSubarrayMinimums _907_SumofSubarrayMinimums = new _907_SumofSubarrayMinimums();
+                int Output = _907_SumofSubarrayMinimums.SumSubarrayMins(InPut);
+                Console.WriteLine(Output);
+            }
+            #endregion
+
             #region _947_MostStonesRemovedwithSameRoworColumn
             {
                 ////[[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
