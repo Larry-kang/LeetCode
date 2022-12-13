@@ -30,34 +30,33 @@ namespace LeetCode
             #region _2_AddTwoNumbers
             {
                 //Input: l1 = [2, 4, 3], l2 = [5, 6, 4]
-                ListNode L1 = new ListNode()
-                {
-                    val = 2,
-                    next = new ListNode()
-                    {
-                        val = 4,
-                        next = new ListNode()
-                        {
-                            val = 3
-                        }
-                    }
-                };
-                ListNode L2 = new ListNode()
-                {
-                    val = 5,
-                    next = new ListNode()
-                    {
-                        val = 6,
-                        next = new ListNode()
-                        {
-                            val = 4
-                        }
-                    }
-                };
-                ListNode result = _2_AddTwoNumbers.AddTwoNumbers(L1, L2);
+                //ListNode L1 = new ListNode()
+                //{
+                //    val = 2,
+                //    next = new ListNode()
+                //    {
+                //        val = 4,
+                //        next = new ListNode()
+                //        {
+                //            val = 3
+                //        }
+                //    }
+                //};
+                //ListNode L2 = new ListNode()
+                //{
+                //    val = 5,
+                //    next = new ListNode()
+                //    {
+                //        val = 6,
+                //        next = new ListNode()
+                //        {
+                //            val = 4
+                //        }
+                //    }
+                //};
+                //ListNode result = _2_AddTwoNumbers.AddTwoNumbers(L1, L2);
 
-                Console.WriteLine(result.ToString());
-
+                //Console.WriteLine(result.ToString());
             }
             #endregion
 
@@ -143,7 +142,7 @@ namespace LeetCode
             }
             #endregion
 
-            #region
+            #region _907_SumofSubarrayMinimums
             {
                 int[] InPut = { 3, 1, 2, 4 }; 
                 _907_SumofSubarrayMinimums _907_SumofSubarrayMinimums = new _907_SumofSubarrayMinimums();

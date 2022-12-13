@@ -21,4 +21,26 @@ JOIN (SELECT *,(SELECT MAX(emp.salary) FROM @Employee emp WHERE emp.departmentId
 FROM @Department dep) AS b
 ON a.departmentId = b.id
 AND a.salary = b.maxVal
-ORDER BY a.id
+ORDER BY a.i
+SELECT *
+FROM(
+SELECT  b.name AS Department,
+        a.name AS Employee,
+        IIF( 
+            (SELECT COUNT(1) FROM
+                (
+                    SELECT TOP 3 salary
+                    FROM @Employee emp
+                    WHERE emp.departmentId = a.departmentId
+                    GROUP BY emp.salary
+                    ORDER BY emp.salary DESC
+                ) AS aa WHERE aa.salary = a.salary) > 0, a.salary, -1
+            ) AS Salary
+FROM @Employee a
+JOIN @Department b ON a.departmentId = b.id
+) AS DATA
+WHERE DATA.Salary >= 0
+ORDER BY DATA.Department, DATA.Salary DESC
+
+
+--SELECT ee.name, ee.departmentId, RANK() OVER (ORDER BY ee.salary DESC) FROM @Employee ee GROUP BY ee.name, ee.salary ,ee.departmentId
